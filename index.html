@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<meta charset="UTF-8">
+	<title>Portfolio of Nina Carducci - Photographer</title>
+	<meta name="description" content="Discover the portfolio of Nina Carducci, photographer specialising in portraits, weddings and events.">
+	<meta name=”keywords” content="Nina Carducci, Photograph, Photographer, Portfolio, Retouching">
+	
+	<meta property="og:type" content="portfolio">
+	<meta property="og:title" content="Portfolio of Nina Carducci - Photographer">
+	<meta property="og:description" content="Discover the portfolio of Nina Carducci, photographer specialising in portraits, weddings and events.">
+	<meta property="og:site_name" content="Portfolio Nina Carducci">
+	<meta property="og:url" content="localhost:8888">
+	<meta property="og:image" content="assets/images/nina.webp">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" rel="preconnect">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css%22%3E" />
 </head>
 <body>
 <div class="top-header">
@@ -22,7 +30,7 @@
 			<li><a href="#gallery">Gallery</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt=""></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" rel="tag"><img src="assets/images/instagram.webp" alt="Logo instagram, lien vers Nina Carducci"></a></li>
 		</ul>
 	</div>
 </div>
@@ -36,13 +44,13 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="...">
+				<img src="./assets/images/slider/slider-3.webp" class="d-block w-100" alt="First image of slider">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="...">
+				<img src="./assets/images/slider/slider-2.webp" class="d-block w-100" alt="Second image of slider">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="...">
+				<img src="./assets/images/slider/slider-1.webp" class="d-block w-100" alt="Third image of slider">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -57,11 +65,11 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.webp">
+		<img src="./assets/images/nina.webp" alt="Portrait of Nina Carducci">
 	</div>
 	<div id="about-me">
 		<h3 class="about-me__title">About Me</h3>
-		<h6 class="about-me__introduction">Becoming a photographer was an easy choice for me. It felt like it was my destiny. Capturing a moment, an emotion, a situation, a place, or a glimmer of light and making them immortal, that’s what drives me.</h6>
+		<h4 class="about-me__introduction">Becoming a photographer was an easy choice for me. It felt like it was my destiny. Capturing a moment, an emotion, a situation, a place, or a glimmer of light and making them immortal, that’s what drives me.</h4>
 		<p>We spend our lives searching for happiness, and once we find it, we want to celebrate it as a photograph to share with the people we love or to show to as many people as possible.
 			This is what I have to offer, capturing these beautiful moments from my perspective, my approach, and my technique. Immortalize these moments so they bring you love, happiness, affection, and light every time you look at your photos.</p>
 	</div>
@@ -70,15 +78,15 @@
 	<h3 class="title">Portfolio</h3>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concerts" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"/>
-			<img data-gallery-tag="Business" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"/>
-			<img data-gallery-tag="Business" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"/>
-			<img data-gallery-tag="Weddings" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"/>
-			<img data-gallery-tag="Portraits" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"/>
-			<img data-gallery-tag="Weddings" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"/>
-			<img data-gallery-tag="Portraits" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg-443cl1uR_8-unsplash.webp"/>
-			<img data-gallery-tag="Concerts" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"/>
-			<img data-gallery-tag="Business" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"/>
+			<img data-gallery-tag="Concerts" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-concert.webp" alt="Aaron paul concert from the porfolio ">
+			<img data-gallery-tag="Business" class="gallery-item" src="./assets/images/gallery/entreprise/entreprise-1.webp" alt="A man for an entreprise from the porfolio ">
+			<img data-gallery-tag="Business" class="gallery-item" src="./assets/images/gallery/entreprise/entreprise-2.webp" alt="A woman for an entreprise from the porfolio ">
+			<img data-gallery-tag="Weddings" class="gallery-item" src="./assets/images/gallery/mariage/mariage-1.webp" alt="A husband and a wife in a mariage holding each other hands from the porfolio ">
+			<img data-gallery-tag="Portraits" class="gallery-item" src="./assets/images/gallery/portraits/portrait-1.webp" alt="Portrait of a white girl from the porfolio ">
+			<img data-gallery-tag="Weddings" class="gallery-item" src="./assets/images/gallery/mariage/mariage-2.webp" alt="Two people getting married from the porfolio ">
+			<img data-gallery-tag="Portraits" class="gallery-item" src="./assets/images/gallery/portraits/portrait-2.webp" alt="Portrait of a black man from the porfolio ">
+			<img data-gallery-tag="Concerts" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-concert.webp" alt="An austin concert from the porfolio ">
+			<img data-gallery-tag="Business" class="gallery-item" src="./assets/images/gallery/entreprise/entreprise-3.webp" alt="A woman on a computer from an entreprise from the porfolio ">
 		</div>
 	</div>
 	<div class="quote">
@@ -91,7 +99,7 @@
 	</div>
 </div>
 <div id="services">
-	<h3 class="title">My services</h3>
+	<h2 class="title">My services</h2>
 	<div class="container">
 		<div class="service">
 			<div class="service__description">
@@ -137,8 +145,8 @@
 <div id="contact">
 	<div class="container">
 		<div class="form-container">
-			<h3>Have a question? Need a quote?</h3>
-			<p> Don’t hesitate to contact me! I’ll get back to you within 24 hours.</p>
+			<h2>Have a question? Need a quote?</h2>
+			<p>Don’t hesitate to contact me! I’ll get back to you within 24 hours.</p>
 			<form action="" method="post">
 				<label for="name">Name</label>
 				<input type="text" name="name" id="name" autocomplete="on">
@@ -150,9 +158,15 @@
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.webp">
+			<img src="./assets/images/camera.webp" alt="Photo of a camera in a dark orange place" rel="tag">
 		</div>
 	</div>
 </div>
+
+<script src="https://kit.fontawesome.com/0433bfbe12.js" crossorigin="anonymous" async></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./assets/maugallery.js"></script>
+<script src="./assets/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" async></script>
 </body>
 </html>

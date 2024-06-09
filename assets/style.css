@@ -1,3 +1,5 @@
+
+
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -91,7 +93,7 @@ body {
 }
 
 #gallery {
-	/*	min-height: 100vh; */
+	min-height: 100vh; 
 }
 .title{
 	text-align: center;
@@ -101,7 +103,7 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: #000;
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
@@ -126,10 +128,14 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
+
+.img-fluid {
+	height: 100%;
+	width: 100%;
+}
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
-	border-radius: 00%;
 	justify-content: center;
 	align-items: center;
 	display: flex;
