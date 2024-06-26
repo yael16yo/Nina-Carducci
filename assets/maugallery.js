@@ -1,3 +1,23 @@
+//Initalisation de la lightbox
+
+$(document).ready(function() {
+    $('.gallery').mauGallery({
+        columns: {
+            xs: 1,
+            sm: 2,
+            md: 3,
+            lg: 3,
+            xl: 3
+        },
+        lightBox: true,
+        lightboxId: 'myAwesomeLightbox',
+        showTags: true,
+        tagsPosition: 'top'
+    });
+});
+
+//Fonction d'affichage de la galerie
+
 !function(a){a.fn.mauGallery=function(t){var t=a.extend(a.fn.mauGallery.defaults,t),e=[];return this.each(function(){a.fn.mauGallery.methods.createRowWrapper(a(this)),t.lightBox&&a.fn.mauGallery.methods.createLightBox(a(this),t.lightboxId,t.navigation),a.fn.mauGallery.listeners(t),a(this).children(".gallery-item").each(function(){a.fn.mauGallery.methods.responsiveImageItem(a(this)),a.fn.mauGallery.methods.moveItemInRowWrapper(a(this)),a.fn.mauGallery.methods.wrapItemInColumn(a(this),t.columns);var l=a(this).data("gallery-tag");t.showTags&&void 0!==l&&-1===e.indexOf(l)&&e.push(l)}),t.showTags&&a.fn.mauGallery.methods.showItemTags(a(this),t.tagsPosition,e),a(this).fadeIn(500)})},a.fn.mauGallery.defaults={columns:3,lightBox:!0,lightboxId:null,showTags:!0,tagsPosition:"bottom",navigation:!0},a.fn.mauGallery.listeners=function(t){a(".gallery-item").on("click",function(){t.lightBox&&"IMG"===a(this).prop("tagName")&&a.fn.mauGallery.methods.openLightBox(a(this),t.lightboxId)}),a(".gallery").on("click",".nav-link",a.fn.mauGallery.methods.filterByTag),a(".gallery").on("click",".mg-prev",()=>a.fn.mauGallery.methods.prevImage(t.lightboxId)),a(".gallery").on("click",".mg-next",()=>a.fn.mauGallery.methods.nextImage(t.lightboxId))},a.fn.mauGallery.methods={createRowWrapper(a){a.children().first().hasClass("row")||a.append('<div class="gallery-items-row row"></div>')},wrapItemInColumn(a,t){if(t.constructor===Number)a.wrap(`<div class='item-column mb-4 col-${Math.ceil(12/t)}'></div>`);else if(t.constructor===Object){var e="";t.xs&&(e+=` col-${Math.ceil(12/t.xs)}`),t.sm&&(e+=` col-sm-${Math.ceil(12/t.sm)}`),t.md&&(e+=` col-md-${Math.ceil(12/t.md)}`),t.lg&&(e+=` col-lg-${Math.ceil(12/t.lg)}`),t.xl&&(e+=` col-xl-${Math.ceil(12/t.xl)}`),a.wrap(`<div class='item-column mb-4${e}'></div>`)}else console.error(`Columns should be defined as numbers or objects. ${typeof t} is not supported.`)},moveItemInRowWrapper(a){a.appendTo(".gallery-items-row")},responsiveImageItem(a){if("IMG"===a.prop("tagName")){a.addClass("img-fluid"),a.attr("loading","lazy");let t=new Image;t.src=a.attr("src"),t.onload=function(){width_reduced=250,height_reduced=250,a.attr("width",width_reduced),a.attr("height",height_reduced)}}},openLightBox(t,e){a(`#${e}`).find(".lightboxImage").attr("src",t.attr("src")),a(`#${e}`).modal("toggle")},prevImage(){let t=null;a("img.gallery-item").each(function(){a(this).attr("src")===a(".lightboxImage").attr("src")&&(t=a(this))});let e=a(".tags-bar span.active-tag").data("images-toggle"),l=[];"all"===e?a(".item-column").each(function(){a(this).children("img").length&&l.push(a(this).children("img"))}):a(".item-column").each(function(){a(this).children("img").data("gallery-tag")===e&&l.push(a(this).children("img"))});let i=0,s=null;a(l).each(function(e){a(t).attr("src")===a(this).attr("src")&&(i=e)});s=l[i-1],a(".lightboxImage").attr("src",a(s).attr("src"))},nextImage(){let t=null;a("img.gallery-item").each(function(){a(this).attr("src")===a(".lightboxImage").attr("src")&&(t=a(this))});let e=a(".tags-bar span.active-tag").data("images-toggle"),l=[];"all"===e?a(".item-column").each(function(){a(this).children("img").length&&l.push(a(this).children("img"))}):a(".item-column").each(function(){a(this).children("img").data("gallery-tag")===e&&l.push(a(this).children("img"))});let i=0,s=null;a(l).each(function(e){a(t).attr("src")===a(this).attr("src")&&(i=e)});s=l[i+1],a(".lightboxImage").attr("src",a(s).attr("src"))},createLightBox(a,t,e){a.append(`<div class="modal fade" id="${t||"galleryLightbox"}" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
